@@ -160,7 +160,8 @@ async function doEverything(token, tokens) {
         console.error(err)
       })
   })
-  client.login(token).catch((err) => {
+-
+   client.login(process.env.TOKEN).catch((err) => {
     console.log(
       `${chalk.redBright("[ERROR]")} Invalid token ${gradient.instagram(token)}`, err
     )
